@@ -3,8 +3,11 @@ const user= require("../../models/user")
 const Listusers=async(req,res)=>{
     try{
        
+            let userList= await user.find();
+
             res.status(200).json({
                 "message":"List user successfully",
+                "users":userList
             })
         
     }catch(error){
