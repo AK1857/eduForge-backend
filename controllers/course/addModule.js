@@ -1,11 +1,11 @@
 const { isValidObjectId } = require("mongoose");
 const Course = require("../../models/course");
-
+const uploadVideo = require('../middleware/uploadCloudinary');
+const { cloudUpload } = require('../controllers/uploadControlers');
 
 const addModule = async (req, res) => {
     try {
         let payload = req.body;
-
         let courseId = req.params.courseId;
         let course = await Course.findOne({ _id:courseId });
 
