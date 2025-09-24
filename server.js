@@ -6,6 +6,7 @@ const userRoutes= require("./routes/userRoutes");
 const courseRoutes= require("./routes/courseRoutes")
 const uploadRoutes = require('./routes/uploadRoutes');
 const streamRoutes = require('./routes/streamRoutes');
+const fileRoutes = require("./routes/fileRoutes");
 
 
 dotenv.config();
@@ -19,6 +20,7 @@ app.use('/api/course', courseRoutes);
 app.use('/api/upload',uploadRoutes)
 
 app.use('/api/stream', streamRoutes);
+app.use('/api/file',fileRoutes)
 
 app.listen(8000,()=>{
     console.log(">>> server run on port ",8000)

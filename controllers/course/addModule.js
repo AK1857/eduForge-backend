@@ -1,7 +1,6 @@
 const { isValidObjectId } = require("mongoose");
 const Course = require("../../models/course");
-const uploadVideo = require('../middleware/uploadCloudinary');
-const { cloudUpload } = require('../controllers/uploadControlers');
+
 
 const addModule = async (req, res) => {
     try {
