@@ -1,3 +1,4 @@
+  - type: web
     name: eduForge-backend
     env: node
     plan: free
